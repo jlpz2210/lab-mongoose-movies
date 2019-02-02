@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+block content
+  title Lista de Peliculas
+  br
+  body
+    each movie in movies
+      div
+        p=movie.title
+        div
+          a(href=`/movies/${movie._id}`) Detalle
+          form(action=`/movies/${movie._id}/delete` method="POST")
+            button(type="submit") Eliminar

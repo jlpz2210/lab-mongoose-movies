@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block content
+  br
+  title=celeb.name
+  div
+    h1=celeb.name
+    p=celeb.occupation
+    p=celeb.catchPhrase
+  div
+    a(href=`/celebrities/${celeb._id}/edit`) Editar

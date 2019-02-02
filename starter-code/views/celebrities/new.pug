@@ -1,0 +1,17 @@
+extends ../layout.pug
+
+block content
+  br
+  title Añadir Celebridad
+  h2
+  form(action="/celebrities/" method="POST")
+    div
+      label Name:
+        input(type="text" name="name")
+    div
+      label Occupation:
+        input(type="text" name="occupation")
+    div
+      label Description:
+        textarea(name="catchPhrase", cols="30", rows="10")
+    button(type="submit") Crear

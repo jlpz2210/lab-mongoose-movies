@@ -1,0 +1,17 @@
+extends ../layout.pug
+
+block content
+  br
+  title Añadir Pelicula
+  h2
+  form(action="/movies/" method="POST")
+    div
+      label Title:
+        input(type="text" name="title")
+    div
+      label Genre:
+        input(type="text" name="genre")
+    div
+      label Plot:
+        textarea(name="plot", cols="30", rows="10")
+    button(type="submit") Crear

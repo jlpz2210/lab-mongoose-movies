@@ -1,0 +1,12 @@
+div
+  form(action=`/celebrities/${celeb._id}` method="POST")
+    div
+      label Name:
+        input(type="text" name="name" value=celeb.name)
+    div
+      label Occupation:
+        input(type="text" name="occupation" value=celeb.occupation)
+    div
+      label Catch Phrase:
+        textarea(name="catchPhrase", cols="30", rows="10")=celeb.catchPhrase
+    button(type="submit") Guardar
